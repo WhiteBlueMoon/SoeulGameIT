@@ -1,1 +1,6 @@
+유니티를 배우면서 내가 몰랐던 것들을 정리하고자 만든 파일입니다.
 
+1. transform.rotation 과 transform.localRotation의 차이
+위 두 문장의 차이는 기준이 되는 축을 어디에 두냐의 차이다.
+rotation은 세계의 축에 기준을 두고 localRotation은 부모 오브젝트의 축에 기준을 둔다.
+localRotation을 사용할 때 부모 오브젝트가 없다면 세계의 축에 기준을 둔다.
