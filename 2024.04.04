@@ -1,6 +1,17 @@
 유니티를 배우면서 내가 몰랐던 것들을 정리하고자 만든 파일입니다.
 
-1. transform.rotation 과 transform.localRotation의 차이
+--1. transform.rotation 과 transform.localRotation의 차이--
 위 두 문장의 차이는 기준이 되는 축을 어디에 두냐의 차이다.
 rotation은 세계의 축에 기준을 두고 localRotation은 부모 오브젝트의 축에 기준을 둔다.
 localRotation을 사용할 때 부모 오브젝트가 없다면 세계의 축에 기준을 둔다.
+
+
+--2. LookAt함수--
+LookAt 함수는 인자가 된 오브젝트를 바라보게 하는 함수다.
+마치 마인크래프트 게임에서 인벤토리에 들어가면 마우스 위치를 바라보는 플레이어 캐릭터처럼 말이다.
+
+
+--3. CharacterController--
+캐릭터의 이동에 사용되는 Component다.
+여러 함수를 가지고 있는데, 이 중 is.Grounded 함수는 이 오브젝트의 아래에서 충돌이 발생했는지를 확인하는 함수다.
+여기서 아래란 CharacterController는 캡슐형태를 띄는데 아래쪽 반구 형태부분을 의미한다.
