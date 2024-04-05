@@ -1,0 +1,5 @@
+
+--1. Material과 Texture--
+캐릭터의 모델링을 변경하는 것은 Material을 변경하는 것보다 Texture를 변경하는 방법이 사용된다.
+이는 Material 보다 Texture 의 용량이 더 작기 때문이다.
+때문에 모델링의 변경( 캐릭터의 무기나 장비 등)은 하나의 Material을 사용해서 Texture를 변경하는 방법이 주로 사용된다.
