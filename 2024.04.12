@@ -28,8 +28,10 @@ Shader "MyCustomShader"
 때문에 이런 코드로 작성해 각 SubShader들 중에서 현재 하드웨어에 가장 맞는 Shader를 사용한다.
 여기서 Fallback의 역할은 모든 SubShader가 현재 하드웨어에 맞지 않는 경우에 사용되는 것으로 "name" 이름을 가진 Shader 오브젝트를 사용한다.
 
+
 --2. pass--
 SubShader 안의 Pass 개수 만큼 오브젝트가 랜더링 된다.
+
 
 --3.Properties--
 Meterial의 Inspector창에 나타난다.
@@ -43,6 +45,7 @@ display name 	: Inspector창에 나타나는 이름이다.
 https://ssan.tistory.com/15
 를 참고하자.
 
+
 --4. CGPROGRAM ~ ENDCG--
 이 부분은 ShaderLab 언어가 아닌 HLSL코드로 작성한다.
 #pragma는 전처리를 해주는데
@@ -54,6 +57,7 @@ fragment shader 메서드 이름을 frag 설정
 이런 의미를 가진다.
 
 Properties에서 만든 변수를 사용하려면 CGPROGRAM ~ ENDCG사이에 선언해야 한다.
+
 
 --5. Tags--
 SubShader Tag의 경우 랜더링 엔진을 렌더링할 방법과 시기를 지정한다.
@@ -84,3 +88,13 @@ RenderType의 종류
 -GrassBillboard: Terrain 빌보드 Grass.
 
 Queue와 RanderType말고도 Tags에 사용할 수 있는 키 값은 https://docs.unity3d.com/kr/530/Manual/SL-SubShaderTags.html을 참조
+
+
+--6.UnityObjectToClipPos()--
+우선 3D 렌더링에서 용도에 따른 좌표공간 구분을 알아야 한다.
+Model Space : 3D모델의 각 vertex좌표가 모델마다 설정된 원점을 중심으로 설정됨.
+World Space : 원점은 세계의 중심으로 Scene View에서 보이는 여러 모델의 좌표 변환.
+View Space : World Space에 배치된 모델들을 카메라 위치를 원점으로 좌표 변환.
+Clip Space : ???
+
+Model Space에서 Clip Space 순서로 좌표를 변환하는데 UnityObjectToClipPos이 함수는 좌표 변환을 자동으로 해준다.
