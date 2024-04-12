@@ -54,7 +54,7 @@ fragment shader 메서드 이름을 frag 설정
 이런 의미를 가진다.
 
 --5. Tags--
-SubShaer Tag의 경우 랜더링 엔진을 렌더링할 방법과 시기를 지정한다.
+SubShader Tag의 경우 랜더링 엔진을 렌더링할 방법과 시기를 지정한다.
 항상 Key-Value의 쌍으로 선언해야 한다.
 
 Tags { "TagName1" = "Value1" "TagName2" = "Value2"}
@@ -68,3 +68,16 @@ Queue의 종류(사전에 정의된 Queue)
 -Transparent : Geometry와 AlphaTest뒤에 렌더링되는 오브젝트. 정수값은 3000
 -Overlay : 오버레이 효과를 위해 사용된다. 마지막으로 랜더링하는 오브젝트에 사용된다. 정수값은 4000
 
+
+RenderType은 쉐이더를 사전에 정의된 그룹으로 분류한다.
+RenderType의 종류
+-Opaque: 대부분의 불투명한 쉐이더.
+-Transparent: 대부분의 부분적으로 투명한 쉐이더
+-TransparentCutout: 마스킹 된 투명 쉐이더
+-Background: Skybox 쉐이더.
+-Overlay: GUITexture, 후광(Halo), 플레어 쉐이더(Flare shaders).
+-TreeOpaque: Terrain 나무 껍질.
+-TreeTransparentCutout: Terrain 나뭇잎.
+-TreeBillboard: Terrain 빌보드 Tree.
+-Grass: Terrain grass.
+-GrassBillboard: Terrain 빌보드 Grass.
