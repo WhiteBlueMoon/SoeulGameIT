@@ -34,10 +34,10 @@ SubShader 안의 Pass 개수 만큼 오브젝트가 랜더링 된다.
 --3.Properties--
 Meterial의 Inspector창에 나타난다.
 변수명, display name, 형식, 초기값 순서로 작성한다.
-변수명은 _을 붙여 입력받았다는 의미를 나타낸다.
-display name은 Inspector창에 나타나는 이름이다.
-형식 어떤 타입의 인터페이스를 만들지를 정한다.
-초기값 Shader가 처음 만들어질 때 지정된 초기값으로 만들어진다.
+변수명		: _을 붙여 입력받았다는 의미를 나타낸다.
+display name 	: Inspector창에 나타나는 이름이다.
+형식 		: 어떤 타입의 인터페이스를 만들지를 정한다.
+초기값		: Shader가 처음 만들어질 때 지정된 초기값으로 만들어진다.
 
 더 자세한 내용은
 https://ssan.tistory.com/15
@@ -52,6 +52,8 @@ vertex shader 메서드 이름을 vert로 설정
 #pragma fragment frag
 fragment shader 메서드 이름을 frag 설정
 이런 의미를 가진다.
+
+Properties에서 만든 변수를 사용하려면 CGPROGRAM ~ ENDCG사이에 선언해야 한다.
 
 --5. Tags--
 SubShader Tag의 경우 랜더링 엔진을 렌더링할 방법과 시기를 지정한다.
