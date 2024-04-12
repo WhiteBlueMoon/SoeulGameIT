@@ -1,0 +1,44 @@
+--1.Shader에 대해--
+우선 유니티 Shader에 대해 먼저 알아야 할 것은 ShaderLab이다.
+ShaderLab은 유니티에서 제공하는 Shader 스크립트 언어로 다양한 플렛폼, 디바이스에 대응하기 위해 만들어졌다.
+Shader "MyCustomShader"
+{
+	SubShader
+	{
+		// body
+	}
+}
+이 코드가 ShaderLab의 기본인데, 하나의 Shader블록이 있고 그 내부에 SubShader가 있는 형태다.
+MyCustomShader 부분이 해당 Shader의 이름이다.
+body 부분이 실제 Shader의 구현 부분이다.
+난 이 코드를 보면서 왜 굳이 SubShader가 있어야 하는지 의문이 들었는데, 이는 하드웨어가 다양하기 때문이다.
+Shader "MyCustomShader"
+{
+	SubShader{
+		// A급 하드웨어
+	}
+	SubShader{
+		// B급 하드웨어
+	}
+	SubShader{
+		// 그외 최저사양
+	}
+  Fallback "name"
+}
+때문에 이런 코드로 작성해 각 SubShader들 중에서 현재 하드웨어에 가장 맞는 Shader를 사용한다.
+여기서 Fallback의 역할은 모든 SubShader가 현재 하드웨어에 맞지 않는 경우에 사용되는 것으로 "name" 이름을 가진 Shader 오브젝트를 사용한다.
+
+--2. pass--
+SubShader 안의 Pass 개수 만큼 오브젝트가 랜더링 된다.
+
+--3.Properties--
+Meterial의 Inspector창에 나타난다.
+변수명, display name, 형식, 초기값 순서로 작성한다.
+변수명은 _을 붙여 입력받았다는 의미를 나타낸다.
+display name은 Inspector창에 나타나는 이름이다.
+형식 어떤 타입의 인터페이스를 만들지를 정한다.
+초기값 Shader가 처음 만들어질 때 지정된 초기값으로 만들어진다.
+
+Shader에 대한 자세한 내용은
+https://ssan.tistory.com/15
+를 참고하자.
