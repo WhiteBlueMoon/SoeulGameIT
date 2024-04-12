@@ -39,6 +39,16 @@ display name은 Inspector창에 나타나는 이름이다.
 형식 어떤 타입의 인터페이스를 만들지를 정한다.
 초기값 Shader가 처음 만들어질 때 지정된 초기값으로 만들어진다.
 
-Shader에 대한 자세한 내용은
+더 자세한 내용은
 https://ssan.tistory.com/15
 를 참고하자.
+
+--4. CGPROGRAM ~ ENDCG--
+이 부분은 ShaderLab 언어가 아닌 HLSL코드로 작성한다.
+#pragma는 전처리를 해주는데
+
+#pragma vertext vert
+vertex shader 메서드 이름을 vert로 설정
+#pragma fragment frag
+fragment shader 메서드 이름을 frag 설정
+이런 의미를 가진다.
