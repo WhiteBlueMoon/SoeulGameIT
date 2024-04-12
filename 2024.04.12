@@ -80,3 +80,5 @@ RenderType의 종류
 -TreeBillboard: Terrain 빌보드 Tree.
 -Grass: Terrain grass.
 -GrassBillboard: Terrain 빌보드 Grass.
+
+Queue와 RanderType말고도 Tags에 사용할 수 있는 키 값은 https://docs.unity3d.com/kr/530/Manual/SL-SubShaderTags.html을 참조
