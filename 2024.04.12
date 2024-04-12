@@ -54,11 +54,17 @@ fragment shader 메서드 이름을 frag 설정
 이런 의미를 가진다.
 
 --5. Tags--
-SubShader내부에 선언되고 항상 Key-Value의 쌍으로 선언해야 한다.
+SubShaer Tag의 경우 랜더링 엔진을 렌더링할 방법과 시기를 지정한다.
+항상 Key-Value의 쌍으로 선언해야 한다.
+
 Tags { "TagName1" = "Value1" "TagName2" = "Value2"}
 TagName1에 Value1을, TagName2에 Value2를 지정한다. 태그를 원하는 수만큼 지정할 수 있다.
 
 Queue는 오브젝트를 그리는 순서를 결정하는 값으로 값이 낮을 수록 먼저 렌더링 된다.
 Queue의 종류(사전에 정의된 Queue)
-
+-Background : 가장 먼저 렌더링된다. 보통 배경에 사용된다. 정수값은 1000
+-Geometry(기본) : 대부분 오브젝트에 사용된다. 불투명 오브젝트에 사용된다. 정수값은 2000
+-AlphaTest : 투명 오브젝트에 사용된다. 정수값은 2450
+-Transparent : Geometry와 AlphaTest뒤에 렌더링되는 오브젝트. 정수값은 3000
+-Overlay : 오버레이 효과를 위해 사용된다. 마지막으로 랜더링하는 오브젝트에 사용된다. 정수값은 4000
 
