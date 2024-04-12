@@ -68,7 +68,6 @@ Queue의 종류(사전에 정의된 Queue)
 -Transparent : Geometry와 AlphaTest뒤에 렌더링되는 오브젝트. 정수값은 3000
 -Overlay : 오버레이 효과를 위해 사용된다. 마지막으로 랜더링하는 오브젝트에 사용된다. 정수값은 4000
 
-
 RenderType은 쉐이더를 사전에 정의된 그룹으로 분류한다.
 RenderType의 종류
 -Opaque: 대부분의 불투명한 쉐이더.
