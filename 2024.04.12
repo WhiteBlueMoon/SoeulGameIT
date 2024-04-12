@@ -52,3 +52,13 @@ vertex shader 메서드 이름을 vert로 설정
 #pragma fragment frag
 fragment shader 메서드 이름을 frag 설정
 이런 의미를 가진다.
+
+--5. Tags--
+SubShader내부에 선언되고 항상 Key-Value의 쌍으로 선언해야 한다.
+Tags { "TagName1" = "Value1" "TagName2" = "Value2"}
+TagName1에 Value1을, TagName2에 Value2를 지정한다. 태그를 원하는 수만큼 지정할 수 있다.
+
+Queue는 오브젝트를 그리는 순서를 결정하는 값으로 값이 낮을 수록 먼저 렌더링 된다.
+Queue의 종류(사전에 정의된 Queue)
+
+
