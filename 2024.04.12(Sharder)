@@ -97,4 +97,8 @@ World Space : 원점은 세계의 중심으로 Scene View에서 보이는 여러
 View Space : World Space에 배치된 모델들을 카메라 위치를 원점으로 좌표 변환.
 Clip Space : 오브젝트가 화면에 보이는지를 판단한다.
 
+
+--7.LOD에 대해--
+Shader에서 사용하는 LOD(Level Of Detail)은 일반적인 LOD와 약간 다른데
+
 Model Space에서 Clip Space 순서로 좌표를 변환하는데 UnityObjectToClipPos이 함수는 좌표 변환을 자동으로 해준다.
