@@ -95,6 +95,6 @@ Queue와 RanderType말고도 Tags에 사용할 수 있는 키 값은 https://doc
 Model Space : 3D모델의 각 vertex좌표가 모델마다 설정된 원점을 중심으로 설정됨.
 World Space : 원점은 세계의 중심으로 Scene View에서 보이는 여러 모델의 좌표 변환.
 View Space : World Space에 배치된 모델들을 카메라 위치를 원점으로 좌표 변환.
-Clip Space : ???
+Clip Space : 오브젝트가 화면에 보이는지를 판단한다.
 
 Model Space에서 Clip Space 순서로 좌표를 변환하는데 UnityObjectToClipPos이 함수는 좌표 변환을 자동으로 해준다.
